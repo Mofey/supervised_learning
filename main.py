@@ -1,4 +1,4 @@
-# Project 3: Loan Approval Prediction using Decision Tree (Supervised Learning)
+# Loan Approval Prediction using Decision Tree (Supervised Learning)
 
 """
 This project applies a Decision Tree Classifier to predict loan approval based on customer financial history.
