@@ -10,8 +10,10 @@ Modules:
 - predict.py: Make predictions
 - main.py: Run the full pipeline
 """
+import sys
+sys.dont_write_bytecode = True
 
-from data_loader import load_data
+from data_loader import load_data, load_new_data
 from model import train_model
 from predict import predict_loan
 
@@ -20,6 +22,6 @@ if __name__ == "__main__":
     X = df[['CreditScore', 'Income', 'LoanAmount']]
     y = df['Approved']
     model = train_model(X, y)
-    new_data = [[720, 55000, 18000]]
+    new_data = load_new_data()
     prediction = predict_loan(model, new_data)
     print(f'Predicted Approval: {prediction[0]}')

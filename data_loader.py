@@ -9,3 +9,12 @@ def load_data():
         'Approved': [0, 1, 1, 1, 1, 0]
     }
     return pd.DataFrame(data)
+
+def load_new_data():
+    """Generates new data for prediction."""
+    new_data = {
+        'CreditScore': [720],
+        'Income': [55000],
+        'LoanAmount': [18000]
+    }
+    return pd.DataFrame(new_data)
