@@ -18,3 +18,7 @@ def load_new_data():
         'LoanAmount': [18000]
     }
     return pd.DataFrame(new_data)
+
+def load_csv_data(file_path='new_loanee_data.csv'):
+    """Loads new data for prediction from a CSV file."""
+    return pd.read_csv(file_path)
